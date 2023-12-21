@@ -24,17 +24,17 @@ const Dashboard = () => {
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content flex flex-col mt-10 lg:mx-28">
                 {/* Page content here */}
-                <div className="">
+                <div className="-mt-10">
                     <Outlet></Outlet>
                 </div>
-                <label htmlFor="my-drawer-2" className="btn btn-primary w-20 mx-auto mt-6 drawer-button lg:hidden">Open drawer</label>
+                <label htmlFor="my-drawer-2" className="btn btn-primary w-20 mx-auto mt-2 lg:mt-6 drawer-button lg:hidden">Open drawer</label>
 
             </div>
             <div className="drawer-side">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
 
                 <div className="w-44 ">
-                    <div className="bg-gray-100 p-2 rounded-lg mt-4">
+                    <div className="bg-indigo-200 p-2 rounded-lg lg:mt-10">
                         <div className="flex justify-center">
                             {
                                 user && <img className="w-32  rounded-full" src={user.photoURL} />
@@ -46,9 +46,9 @@ const Dashboard = () => {
                             }</button>
                         </div>
                     </div>
-                    <ul className="menu  italic  bg-sky-200 rounded-lg mt-4">
+                    <ul className="menu  italic font-bold bg-sky-200 rounded-lg mt-4">
 
-                        {
+                        
                             <>
                                 <li >
                                     <NavLink to={'/'}><FaHome></FaHome>Home</NavLink>
@@ -57,14 +57,14 @@ const Dashboard = () => {
                                     <NavLink to='/dashboard/addTask'> Add Task</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to='/dashboard/addProducts'> To-do List</NavLink>
+                                    <NavLink to='/dashboard/todoList'> To-do List</NavLink>
                                 </li>
                                 <li>
                                     <NavLink to='/dashboard/myProducts'> My Products</NavLink>
                                 </li>
 
                             </>
-                        }
+                        
 
                     </ul>
 
