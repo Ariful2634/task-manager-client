@@ -45,7 +45,7 @@ const Register = () => {
                 })
                 form.reset()
 
-                console.log(user)
+                // console.log(user)
                 Swal.fire(
                     'Congratulations',
                     'User Created Successfully!',
