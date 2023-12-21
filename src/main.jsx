@@ -11,6 +11,9 @@ import Home from './Components/Home/Home';
 import AuthProvider from './Components/Provider/AuthProvider';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
+import Dashboard from './Components/Dashboard/Dashboard';
+import AddTask from './Components/Dashboard/AddTask';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +34,16 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path:'dashboard',
+    element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+    children:[
+      {
+        path:'addTask',
+        element:<AddTask></AddTask>
+      }
+    ]
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
