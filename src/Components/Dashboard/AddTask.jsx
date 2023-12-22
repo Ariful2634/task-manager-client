@@ -69,7 +69,7 @@ const AddTask = () => {
                 </select>
 
                 <div className="form-control mt-6">
-                    <button className="btn bg-gradient-to-r from-pink-500 to-yellow-500">Submit</button>
+                    <button className="btn bg-gradient-to-r from-pink-500 to-yellow-500 text-white">Submit</button>
                 </div>
 
             </form>

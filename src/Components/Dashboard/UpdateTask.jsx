@@ -80,7 +80,7 @@ const UpdateTask = () => {
                 </select>
 
                 <div className="form-control mt-6">
-                    <button className="btn bg-gradient-to-r from-indigo-500 to-yellow-500 font-bold text-lg">Submit</button>
+                    <button className="btn bg-gradient-to-r from-indigo-500 to-yellow-500 font-bold text-lg text-white">Submit</button>
                 </div>
 
             </form>

@@ -21,14 +21,14 @@ const Dashboard = () => {
     };
 
     return (
-        <div className="drawer lg:drawer-open max-w-6xl mx-auto">
+        <div className="drawer lg:drawer-open max-w-7xl mx-auto">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content flex flex-col mt-10 lg:mx-28">
                 {/* Page content here */}
                 <div className="-mt-10">
                     <Outlet></Outlet>
                 </div>
-                <label htmlFor="my-drawer-2" className="btn btn-primary w-20 mx-auto mt-2 lg:mt-6 drawer-button lg:hidden">Open drawer</label>
+                <label htmlFor="my-drawer-2" className="btn btn-primary w-20 mx-auto mt-5 lg:mt-6 drawer-button lg:hidden">Open drawer</label>
 
             </div>
             <div className="drawer-side">
@@ -47,18 +47,18 @@ const Dashboard = () => {
                             }</button>
                         </div>
                     </div>
-                    <ul className="menu h-[150px] italic font-bold bg-sky-200 rounded-lg mt-4">
+                    <ul className="menu h-[150px] italic font-bold bg-green-200 rounded-lg mt-4">
 
                         
                             <>
                                 <li >
-                                    <NavLink to={'/'}><FaHome></FaHome>Home</NavLink>
+                                    <NavLink to={'/'}><FaHome className="text-lg"></FaHome><span className="text-transparent text-lg bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 font-bold">Home</span></NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to='/dashboard/addTask'><FaTasks></FaTasks> Add Task</NavLink>
+                                    <NavLink to='/dashboard/addTask'><FaTasks></FaTasks> <span className="text-transparent text-lg bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 font-bold">Add Task</span></NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to='/dashboard/todoList'><FcTodoList></FcTodoList> To-do List</NavLink>
+                                    <NavLink to='/dashboard/todoList'><FcTodoList></FcTodoList><span className="text-transparent text-lg bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 font-bold">To-do List</span></NavLink>
                                 </li>
                                 
 

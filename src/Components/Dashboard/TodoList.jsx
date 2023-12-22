@@ -10,7 +10,7 @@ import { GrDocumentUpdate } from "react-icons/gr";
 
 const TodoList = () => {
 
-    const {user} = useContext(AuthContext)
+    const { user } = useContext(AuthContext)
 
     const { refetch, data: tasks = [] } = useQuery({
         queryKey: ['tasks'],
@@ -22,7 +22,7 @@ const TodoList = () => {
 
     })
 
-    const todo = tasks.filter(task=>task?.email == user?.email)
+    const todo = tasks.filter(task => task?.email == user?.email)
 
     const handleDelete = (id) => {
         Swal.fire({
@@ -56,20 +56,32 @@ const TodoList = () => {
     }
 
     return (
-        <div>
-            {
-                todo.map(task => (<div key={task._id} className="card w-[370px] mx-auto border-b border-pink-500 shadow-2xl lg:mx-0 grid-cols-1 mt-10 bg-transparent ">
-                    <div className="card-body items-center text-center">
-                        <h2 className="card-title">{task.title}</h2>
-                        <p>{task.description}</p>
-                        <p>{task.deadline}</p>
-                        <div className="card-actions justify-center">
-                            <button onClick={() => { handleDelete(task._id) }} className="btn bg-gradient-to-r from-pink-500 to-yellow-500  border-none font-bold "><FaTrash></FaTrash>Delete</button>
-                            <Link to={`/dashboard/taskUpdate/${task._id}`}><button className="btn bg-gradient-to-r from-indigo-500 to-purple-500  border-none font-bold"><GrDocumentUpdate></GrDocumentUpdate>Update</button></Link>
+        <div className="flex lg:flex-row flex-col w-[310px] mx-auto lg:w-0 lg:mx-0 gap-6">
+
+            <div className="w-[305px]">
+                <h2 className="mt-10 text-center font-bold text-2xl text-red-600">To-do</h2>
+                {
+                    todo.map(task => (<div key={task._id} className="card w-[300px] mx-auto border-b border-pink-500 shadow-2xl lg:mx-0 grid-cols-1 mt-3 bg-transparent ">
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">{task.title}</h2>
+                            <p>{task.description}</p>
+                            <p>{task.deadline}</p>
+                            <div className="card-actions justify-center">
+                                <button onClick={() => { handleDelete(task._id) }} className="btn bg-gradient-to-r from-pink-500 to-yellow-500 text-white  border-none font-bold "><FaTrash></FaTrash>Delete</button>
+                                <Link to={`/dashboard/taskUpdate/${task._id}`}><button className="btn bg-gradient-to-r from-indigo-500 to-purple-500  border-none font-bold text-white"><GrDocumentUpdate></GrDocumentUpdate>Update</button></Link>
+                            </div>
                         </div>
-                    </div>
-                </div>))
-            }
+                    </div>))
+                }
+            </div>
+            <div className="w-[305px] px-24">
+                <h2 className="mt-10 text-center font-bold text-2xl text-green-600">Ongoing</h2>
+              
+            </div>
+            <div className="w-[305px] px-24">
+                <h2 className="mt-10 text-center font-bold text-2xl text-blue-600">Completed</h2>
+                
+            </div>
         </div>
     );
 };
