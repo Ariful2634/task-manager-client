@@ -58,7 +58,7 @@ const TodoList = () => {
     return (
         <div>
             {
-                todo.map(task => (<div key={task._id} className="card w-[370px] grid-cols-1 shadow-2xl mt-10 bg-neutral text-neutral-content">
+                todo.map(task => (<div key={task._id} className="card w-[370px] mx-auto lg:mx-0 grid-cols-1 mt-10 bg-neutral text-neutral-content">
                     <div className="card-body items-center text-center">
                         <h2 className="card-title">{task.title}</h2>
                         <p>{task.description}</p>

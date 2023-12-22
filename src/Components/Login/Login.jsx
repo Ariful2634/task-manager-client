@@ -25,7 +25,7 @@ const Login = () => {
             .then(res => {
                 const loggedInUser = res.user;
                 console.log(loggedInUser)
-                navigate(location?.state ? location.state : '/')
+                navigate(location?.state ? location.state : '/dashboard/addTask')
 
                 Swal.fire(
                     'Congratulations',
@@ -52,7 +52,7 @@ const Login = () => {
                     'You Logged In Successfully!',
                     'success'
                 )
-                navigate(location?.state ? location.state : '/')
+                navigate(location?.state ? location.state : '/dashboard/addTask')
             })
             .catch(error => {
 
