@@ -67,7 +67,7 @@ const router = createBrowserRouter([
       {
         path:'taskUpdate/:id',
         element:<UpdateTask></UpdateTask>,
-        loader:()=>fetch("http://localhost:5000/tasks")
+        loader:()=>fetch("https://task-manager-server-alpha-rust.vercel.app/tasks")
         
       }
     ]

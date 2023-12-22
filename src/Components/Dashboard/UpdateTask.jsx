@@ -27,7 +27,7 @@ const UpdateTask = () => {
 
     const onSubmit = (data) => {
         console.log(data)
-        axios.put(`http://localhost:5000/update/${_id}`, data)
+        axios.put(`https://task-manager-server-alpha-rust.vercel.app/update/${_id}`, data)
         .then(res => {
             if (res.data.modifiedCount > 0) {
              

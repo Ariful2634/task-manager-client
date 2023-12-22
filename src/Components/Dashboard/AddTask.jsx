@@ -19,7 +19,7 @@ const AddTask = () => {
 
     const onSubmit = (data) => {
         console.log(data)
-        axios.post("http://localhost:5000/tasks",data)
+        axios.post("https://task-manager-server-alpha-rust.vercel.app/tasks",data)
         .then(res=>{
             console.log(res.data)
             if(res.data.insertedId){

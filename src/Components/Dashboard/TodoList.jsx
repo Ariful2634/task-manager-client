@@ -15,7 +15,7 @@ const TodoList = () => {
     const { refetch, data: tasks = [] } = useQuery({
         queryKey: ['tasks'],
         queryFn: async () => {
-            const res = await axios.get('http://localhost:5000/tasks')
+            const res = await axios.get('https://task-manager-server-alpha-rust.vercel.app/tasks')
             return res.data
 
         }
@@ -36,7 +36,7 @@ const TodoList = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                axios.delete(`http://localhost:5000/tasks/${id}`)
+                axios.delete(`https://task-manager-server-alpha-rust.vercel.app/tasks/${id}`)
                     .then(res => {
                         // console.log(data)
                         if (res.data.deletedCount > 0) {
