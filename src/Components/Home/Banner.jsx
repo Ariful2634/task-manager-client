@@ -12,7 +12,7 @@ const Banner = () => {
             <div className="bg-[url('https://i.ibb.co/n1tYkxn/tbanner-removebg-preview.png')] bg-cover bg-center bg-no-repeat w-[350px] h-[300px] lg:w-[700px] mx-auto lg:h-[450px] relative">
                 <div className="text-center">
                    {
-                    user ?  <button className="btn absolute top-[280px] lg:top-[420px]  bg-gradient-to-r from-sky-500 to-purple-500  font-bold" disabled>Let's Explore</button> :
+                    user ?  <Link to='/dashboard/addTask'><button className="btn absolute top-[280px] lg:top-[420px]  bg-gradient-to-r from-sky-500 to-purple-500  font-bold">Let's Explore</button></Link> :
                     <Link to='/login'><button className="btn absolute top-[280px] lg:top-[420px]  bg-gradient-to-r from-sky-500 to-purple-500 text-white font-bold">Let's Explore</button></Link>
                    }
                 </div>
