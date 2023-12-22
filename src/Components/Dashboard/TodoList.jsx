@@ -58,7 +58,7 @@ const TodoList = () => {
     return (
         <div className="flex lg:flex-row flex-col w-[310px] mx-auto lg:w-0 lg:mx-0 gap-6">
 
-            <div className="w-[305px] px-24">
+            <div className="w-[305px] ">
                 <h2 className="mt-10 text-center font-bold text-2xl text-red-600">To-do</h2>
                 {
                     todo.map(task => (<div key={task._id} className="card w-[300px] mx-auto border-b border-pink-500 shadow-2xl lg:mx-0 grid-cols-1 mt-3 bg-transparent ">
