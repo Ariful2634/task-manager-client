@@ -41,7 +41,7 @@ const Dashboard = () => {
                             }
                         </div>
                         <div className="text-center">
-                            <button className="btn btn-sm text-blue-600 font-bold text-xl mt-1  btn-ghost">{
+                            <button className="btn btn-sm text-blue-600 font-bold mt-1  btn-ghost">{
                                 user && <p>{user.displayName}</p>
                             }</button>
                         </div>

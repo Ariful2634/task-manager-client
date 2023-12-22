@@ -8,11 +8,10 @@ import Swal from "sweetalert2";
 const AddTask = () => {
 
     const {user} = useContext(AuthContext)
-    // const mailUser = user?.email
+   
     const {
         register,
         handleSubmit,
-        
         reset,
         
     } = useForm()
