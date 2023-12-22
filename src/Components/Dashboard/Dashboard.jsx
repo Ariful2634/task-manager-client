@@ -1,9 +1,10 @@
 import { useContext } from "react";
-import { FaHome } from "react-icons/fa";
+import { FaHome, FaTasks } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import Lottie from 'react-lottie';
 import loti from '../../lottie/Animation - 1703166073696.json'
+import { FcTodoList } from "react-icons/fc";
 
 
 const Dashboard = () => {
@@ -46,7 +47,7 @@ const Dashboard = () => {
                             }</button>
                         </div>
                     </div>
-                    <ul className="menu  italic font-bold bg-sky-200 rounded-lg mt-4">
+                    <ul className="menu h-[150px] italic font-bold bg-sky-200 rounded-lg mt-4">
 
                         
                             <>
@@ -54,14 +55,12 @@ const Dashboard = () => {
                                     <NavLink to={'/'}><FaHome></FaHome>Home</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to='/dashboard/addTask'> Add Task</NavLink>
+                                    <NavLink to='/dashboard/addTask'><FaTasks></FaTasks> Add Task</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to='/dashboard/todoList'> To-do List</NavLink>
+                                    <NavLink to='/dashboard/todoList'><FcTodoList></FcTodoList> To-do List</NavLink>
                                 </li>
-                                <li>
-                                    <NavLink to='/dashboard/myProducts'> My Products</NavLink>
-                                </li>
+                                
 
                             </>
                         

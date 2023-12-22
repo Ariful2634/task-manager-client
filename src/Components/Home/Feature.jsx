@@ -8,7 +8,7 @@ const Feature = () => {
     return (
         <div>
             <h2 className="text-transparent text-center mt-16 mb-8 bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500 text-3xl font-bold">Targetted Audience</h2>
-            <Marquee pauseOnHover={true}>
+            <Marquee>
                 <div className="mr-20">
                     <img className="w-[200px]  rounded shadow" src={student} alt="" />
                     <h2 className="text-center font-bold mt-1 text-blue-600">Student</h2>
