@@ -52,13 +52,13 @@ const Dashboard = () => {
                         
                             <>
                                 <li >
-                                    <NavLink to={'/'}><FaHome className="text-lg"></FaHome><span className="text-transparent text-lg bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 font-bold">Home</span></NavLink>
+                                    <NavLink to={'/'}><FaHome className="text-lg"></FaHome><span className="text-transparent text-md bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 font-bold">Home</span></NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to='/dashboard/addTask'><FaTasks></FaTasks> <span className="text-transparent text-lg bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 font-bold">Add Task</span></NavLink>
+                                    <NavLink to='/dashboard/addTask'><FaTasks></FaTasks> <span className="text-transparent text-md bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 font-bold">Add Task</span></NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to='/dashboard/todoList'><FcTodoList></FcTodoList><span className="text-transparent text-lg bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 font-bold">To-do List</span></NavLink>
+                                    <NavLink to='/dashboard/todoList'><FcTodoList></FcTodoList><span className="text-transparent text-md bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 font-bold">To-do List</span></NavLink>
                                 </li>
                                 
 
