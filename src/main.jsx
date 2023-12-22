@@ -20,6 +20,8 @@ import {
 } from '@tanstack/react-query'
 import TodoList from './Components/Dashboard/TodoList';
 import UpdateTask from './Components/Dashboard/UpdateTask';
+import AboutUs from './Components/AboutUs/AboutUs';
+import Faq from './Components/Faq/Faq';
 
 const queryClient = new QueryClient()
 
@@ -39,6 +41,14 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login></Login>
+      },
+      {
+        path:'/about',
+        element:<AboutUs></AboutUs>
+      },
+      {
+        path:'/faq',
+        element:<Faq></Faq>
       }
     ]
   },

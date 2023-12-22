@@ -9,7 +9,7 @@ const Footer = () => {
 
     return (
         <div>
-            <footer className="footer p-10 mt-8 mb-2 rounded bg-gradient-to-r from-sky-300 to-purple-500 text-neutral-content">
+            <footer className="footer p-10 mt-16 mb-2 rounded bg-gradient-to-r from-sky-300 to-purple-500 text-neutral-content">
                 <aside>
                 <img className="w-[200px]" src={logo} alt="" />
                     <p className="ml-8 text-white font-bold text-xl italic">Task Manager Ltd.<br />Your Task Note Partner</p>
