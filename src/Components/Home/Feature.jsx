@@ -21,7 +21,7 @@ const Feature = () => {
                     <img className="w-[200px]  rounded shadow" src={banker} alt="" />
                     <h2 className="text-center font-bold mt-1 text-blue-600">Banker</h2>
                 </div>
-                <div>
+                <div className="mr-20">
                     <img className="w-[200px]  rounded shadow" src={sportsman} alt="" />
                     <h2 className="text-center font-bold mt-1 text-blue-600">Sports Man</h2>
                 </div>
